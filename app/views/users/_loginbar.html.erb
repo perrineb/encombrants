@@ -1,9 +1,15 @@
-Login bar
 
 <% if user_signed_in? %>
-	<%= current_user %>
+	Welcome <%= current_user %> !
+	<a href="#">Deconnexion</a>
 <% else %>
 	<% # lien de login %>
+
+	<p>Sign in</p>
+	<%= render :partial => 'users/login'  %>
+
+	<a href="#">or signup</a>
+
 <% end %>
 
 
