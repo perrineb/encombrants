@@ -41,3 +41,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # pour l'upload des images / fichiers
 gem 'carrierwave'  # https://github.com/carrierwaveuploader/carrierwave
+
+# devise
+# gestion des utilisateurs
+gem 'devise' #https://github.com/plataformatec/devise
+

@@ -1,4 +1,4 @@
-<h1>Listing items</h1>
+<h2>Listing items</h2>
 
 <table>
   <thead>
@@ -15,7 +15,7 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td><%= image_tag(@item.image_url) if @item.image? %></td>
+        <td><%#= image_tag(@item.image_url) if @item.image? %></td>
         <td><%= item.name %></td>
         <td><%= item.adress %></td>
         <td><%= item.description %></td>
