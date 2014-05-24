@@ -22,8 +22,7 @@
 
 <p>
   <strong>Image:</strong>
-  -<%= @item.image.current_path %>-
-  <img src="<%= @item.image.current_path %>">
+  <%= image_tag(@item.image_url) if @item.image? %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
