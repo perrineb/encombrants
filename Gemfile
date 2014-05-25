@@ -46,3 +46,8 @@ gem 'carrierwave'  # https://github.com/carrierwaveuploader/carrierwave
 # gestion des utilisateurs
 gem 'devise' #https://github.com/plataformatec/devise
 
+
+# géoloc
+gem 'gmaps4rails'
+
+

@@ -2,6 +2,10 @@
 
 <h2><%= @item.name %></h2>
 
+<div style='width: 800px;'>
+ 	<div class="map" id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
 <p>
   <strong>Adress:</strong>
   <%= @item.adress %>
@@ -22,5 +26,31 @@
   <%= image_tag(@item.image_url) if @item.image? %>
 </p>
 
+
+
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
+
+
+
+<script type="text/javascript">
+	
+
+	handler = Gmaps.build('Google');
+	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+	markers = handler.addMarkers([
+	  {
+	    "lat": 0,
+	    "lng": 0,
+	    "picture": {
+	      "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+	      "width":  36,
+	      "height": 36
+	    },
+	    "infowindow": "hello!"
+	  }
+	]);
+	handler.bounds.extendWith(markers);
+	handler.fitMapToBounds();
+	});
+</script>

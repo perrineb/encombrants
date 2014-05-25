@@ -3,8 +3,10 @@
 	Welcome <%= current_user %> !
 	<a href="#">Deconnexion</a>
 <% else %>
-	<% # lien de login %>
+	<% # todo : ne pas afficher cette partie si on est dans les pages item (autentification obligatoire, du coup on a 2 forms de connexion) %>
 
+	<% # lien de login %>
+	
 	<p>Sign in</p>
 	<%= render :partial => 'users/login'  %>
 
